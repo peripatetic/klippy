@@ -8,7 +8,7 @@ import parser, archive_clippings
 path_to_clippings = '/Volumes/Kindle/My Clippings.txt'
 path_to_devon_db = 'x-devonthink-item://D3CFF827-82A1-4BBA-B5D8-0B676F06A89F' # My "Reading Notes" folder in my "Research" Devonthink db
 # path_to_devon_db = 'x-devonthink-item://9211E9D3-B3C8-4548-A2E5-EA5F43486827' # Testing db
-path_to_backup = '../clippings/clippings_backup.zip'
+path_to_backup = '/Users/zach/Dropbox/Apps/klippy/clippings_backup.zip'
 
 # =============================
 # Open and parse clippings
