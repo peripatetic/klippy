@@ -2,4 +2,3 @@
 tests/
 *.pyc
 setup.py
-clippings_backup.zip
