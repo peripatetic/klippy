@@ -11,17 +11,17 @@ I have developed a group of tags to make this go quickly and to classify the inf
 
 ### An example in context from my clippings: ###
 
-> ==========  
-> Postwar: A History of Europe Since 1945 (Tony Judt)
-> - Your Note Location 11839 | Added on Thursday, April 18, 2013 3:45:53 PM
-> 
-> .int .... the social safety net can only be cut just so far  
-> ==========  
-> ﻿Postwar: A History of Europe Since 1945 (Tony Judt)
-> - Your Highlight Location 11836-11839 | Added on Thursday, April 18, 2013 3:45:53 PM
-> 
-> Thus when Mrs. Thatcher and her successor John Major so much as hinted that they might begin privatizing the National Health Service or charging fees for state education, public support evaporated—among precisely those newly-prosperous but highly vulnerable sectors of the population that had been attracted to Thatcherism in the first place.  
-> ==========  
+    ==========
+    Postwar: A History of Europe Since 1945 (Tony Judt)
+    - Your Note Location 11839 | Added on Thursday, April 18, 2013 3:45:53 PM
+    
+    .int .... the social safety net can only be cut just so far  
+    ==========
+    Postwar: A History of Europe Since 1945 (Tony Judt)
+    - Your Highlight Location 11836-11839 | Added on Thursday, April 18, 2013 3:45:53 PM
+    
+    Thus when Mrs. Thatcher and her successor John Major so much as hinted that they might begin privatizing the National Health Service or charging fees for state education, public support evaporated—among precisely those newly-prosperous but highly vulnerable sectors of the population that had been attracted to Thatcherism in the first place.  
+    ==========  
 
 In the above example, you can see a tag (“.int” for interesting) followed by a note.
 
@@ -33,8 +33,8 @@ The “My Clippings.txt” file itself is deleted to avoid duplicating clippings
 
 The parser is based on certain characters that the Kindle uses to format and separate parts of metadata. To get the title, it looks for all text until the first parenthesis "(", wherein traditionally the Kindle puts the author's name. If your book's title includes parentheses in the title, this will affect the parser. See this example from a book purchased from Amazon:
 
-> Indignez-vous ! édition revue et augmentée (Ceux qui marchent contre le vent) (French Edition) (Hessel, Stéphane)
-> - Your Note Location 149 | Added on Tuesday, May 7, 2013 11:11:09 AM
+    Indignez-vous ! édition revue et augmentée (Ceux qui marchent contre le vent) (French Edition) (Hessel, Stéphane)
+    - Your Note Location 149 | Added on Tuesday, May 7, 2013 11:11:09 AM
 
 The parser will interpret the author of this book as "Ceux qui marchent contre le vent". At the moment I don't have a fix for this other than being cognizant of your book titles (most easily if you load them yourself via Calibre) and failing that by doing a search & replace beforehand. However, this is perhaps a rare occurence.
 
