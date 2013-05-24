@@ -1,4 +1,5 @@
 .DS_Store
 tests/
 *.pyc
-setup.pclippings_backup.zip
+setup.py
+clippings_backup.zip
