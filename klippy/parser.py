@@ -1,6 +1,6 @@
 # Based on https://github.com/tswicegood/pyKindle
 # Updated to work with the Kindle Paperwhite (changes to date, location formats)
-# Updated to handle all data as unicode
+# Updated to handle data as unicode because I often read texts in French and thus with accents
 
 import datetime, time, re
 
@@ -12,7 +12,7 @@ KINDLE_DATE_FORMAT = '%A, %B %d, %Y %I:%M:%S %p' # Updated for the Paperwhite
 LINE_BREAK = "\r\n"
 
 def filter_title(title_meta):
-    return title_meta[:title_meta.rfind(' (')]
+    return title_meta[:title_meta.rfind(' (')] # If your book title has a parenthesis, this will screw up the title and author formatting. Search & replace may be necessary before launching the script.
 
 def filter_author(title_meta):
     return title_meta[title_meta.rfind(' (')+2:title_meta.rfind(')')]
@@ -42,9 +42,12 @@ def note_tags_stripped(note):
     return comment
 
 def assign_tags(meta):
+# This dictionary responds to my needs and note-taking. It is a first attempt to categorize information for easier retrieval. I was inspired by Pocket and Evernote's tagging abilities for this, but unlike those programs when reading on the Kindle you can't see your most-used tags or get tag completion by typing a few letters. Thus, I am attempting to keep it concise because to overload your head with tags could be counterproductive, and a time-waster when you really just want to get your idea out. It should be adapted to the needs of each individual.
+# 'cmt' for general ideas on a passage, not fitting any other specific tags
+# 'ma' for things I need to research more. Such a tag could receive a red label or smart group in Devonthink to pull together points I need to investigate when I don't know where to turn.
 
     tags_dict = {
-        'cmt' : 'comments',
+        'cmt' : 'comments', 
         'econ' : 'economics',
         'int' : 'interesting',
         'ma' : 'more attention',
