@@ -51,3 +51,5 @@ The parser takes whatever is in brackets as the name. I have only seen one insta
 ### TODO ###
 
 1. Write nosetests
+2. Automate the process via Hazel or Applescript so that when I connect my Kindle it automatically runs the script without user interaction beyond an Applescript pop-up or something
+3. Probably a lot more I haven't thought of yet
