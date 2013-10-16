@@ -5,8 +5,9 @@ import parser, archive_clippings
 # =============================
 # Script variables
 
-path_to_clippings = '/Volumes/Kindle/My Clippings.txt'
-path_to_devon_db = 'x-devonthink-item://D3CFF827-82A1-4BBA-B5D8-0B676F06A89F' # My "Reading Notes" folder in my "Research" Devonthink db
+path_to_clippings = '/Users/zach/Desktop/My Clippings.txt'
+# path_to_clippings = '/Volumes/Kindle/documents/My Clippings.txt'
+path_to_devon_db = 'x-devonthink-item://34310C73-BA49-4713-8CF1-0E12384642B7' # My "Reading Notes" folder in my "Research" Devonthink db
 # path_to_devon_db = 'x-devonthink-item://9211E9D3-B3C8-4548-A2E5-EA5F43486827' # Testing db
 path_to_backup = '/Users/zach/Dropbox/Apps/klippy/clippings_backup.zip'
 
@@ -41,15 +42,23 @@ for clipping in joined_highlights:
     comment_titles = {
         'comments' : 'Thoughts',
         'economics' : 'Econ',
-        'disenfranchisement' : 'Voting',
-        'interesting' : 'Thoughts',
-        'more attention' : 'Query',
+        'disenfranchisement' : 'Dis-Vote',
+        'history' : 'History',
+        'interesting' : 'Interesting',
+        'legal' : 'Judicial',
+        'more attention' : 'Investigate',
         'motif' : 'Motif',
-        'politics' : 'PoliSci',
+        'politics' : 'Politics',
         'quotable' : 'Quotable',
-        'society' : 'Society',
         'race' : 'Race',
+        'research ideas' : 'Research ideas',
+        'resource' : 'Resource',
+        'restrictions' : 'Restrict-Vote',
+        'society' : 'Society',
+        'supreme court' : 'Supreme Court',
+        'statistics' : 'Statistics',
         'theme' : 'Theme',
+        'voting' : 'Voting',
     }
 
     def format_devonthink_name():
@@ -71,6 +80,8 @@ for clipping in joined_highlights:
         k.tags: tags,
         },
         in_ = folder)
+
+    print "Created one record for: " + book_title
 
 # =============================
 # Rename and archive "My Clippings.txt" to zip file

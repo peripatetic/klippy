@@ -49,15 +49,23 @@ def assign_tags(meta):
     tags_dict = {
         'cmt' : 'comments', 
         'econ' : 'economics',
+        'hist' : 'history',
         'int' : 'interesting',
+        'law' : 'legal',
         'ma' : 'more attention',
         'mo' : 'motif',
         'pol' : 'politics',
         'soc' : 'society',
+        'src' : 'resource',
+        'sc' : 'supreme court',
+        'stat' : 'statistics',
         'race' : 'race',
+        'ri' : 'research ideas',
         'thm' : 'theme',
-        'vote' : 'disenfranchisement',
-        'ws' : 'quotable'
+        'vote' : 'voting',
+        'vd' : 'disenfranchisement',
+        'vr' : 'restrictions',
+        'ws' : 'quotable',
     }
 
     tags = [] 
@@ -108,7 +116,6 @@ def join_notes(parsed_data, new_dataset):
             note = clipping['highlight']
             clean_note = note_tags_stripped(note)
             tags = assign_tags(filter_tags(note))
-            tags.append('kindle')
 
             parsed_data[index + 1]['tag'] = tags
             parsed_data[index + 1]['note'] = clean_note
